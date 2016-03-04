@@ -13,10 +13,10 @@
 // CALL THE PACKAGES --------------------
 var express = require('express');
 var app = express(); //define app using express
-var body-parser = require('body-parser'); //get body parser
+var bodyParser = require('body-parser'); //get body parser
 var morgan = require('morgan'); //used to log requests
 var mongoose = require('mongoose'); //for working with our db
-var port = process.env.PORT || 8080; //sets the port our app will use
+var port = process.env.PORT || 8088; //sets the port our app will use [using port 8088 instead of 8080 due to conflict]
 
 // APP CONFIGURATION ---------------------
 // Uses body-parser to grab information from POST requests
@@ -48,7 +48,7 @@ var apiRouter = express.Router();
 // test route to make sure everything is working
 // accessed at GET http://localhost:8080/api
 apiRouter.get('/', function(req, res){
-  res.json({"Hooray, welcome to our api!"});
+  res.json({message: "Hooray, welcome to our api!"});
 });
 
 // more routes for our API will happen here
