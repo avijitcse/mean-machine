@@ -34,6 +34,12 @@ app.use(function(req, res, next){
 // log all requests to the console
 app.use(morgan('dev'));
 
+// DATABASE SETUP
+// =============================
+// connect to our database (hosted locally):
+mongoose.connect('mongodb://localhost:27017/CRM_db')
+
+
 // ROUTES FOR OUR API
 // =============================
 
