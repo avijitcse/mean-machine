@@ -12,7 +12,7 @@ var userSchema = new Schema({
 });
 
 // hash the password before the user is saved
-userSchema.pre('save', funcion(next){
+userSchema.pre('save', function(next){
   var user = this;
   // only hash the password if it's a new user or the password has changed
       if(!user.isModified('password')) return next();
